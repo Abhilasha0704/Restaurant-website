@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: #1f2933;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links a {
+    color: #f9fafb;
+    font-weight: 500;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: #ff7a59;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.menu-btn:hover {
+    background: #ff2f2f;
+    transform: scale(1.05);
+}
+
+#about,
+#contact {
+    padding: 4rem 6rem;
+}
+
+#about h2,
+#contact h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #1f2933;
+}
+
+#about p,
+#contact p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+    max-width: 800px;
+}
+
+
+/* Hero */
+.hero {
+    background: linear-gradient(120deg, #fff1eb, #ace0f9);
+    padding: 6rem 4rem;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-images {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-images img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.hero-images img:hover {
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+.ghost-btn {
+    padding: 14px 36px;
+    border: 2px dashed #ff7a59;
+    background: transparent;
+    color: #ff7a59;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* Small badge */
+.hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Heading */
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #1f2933;
+}
+
+.hero h2 span{
+    color: #ff7a59;
+}
+
+/* Paragraph */
+.hero p {
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.primary-btn {
+padding: 14px 36px;
+background: #ff4d4d;
+color: white;
+border: none;
+border-radius: 30px;
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.primary-btn:hover {
+background: #ff2f2f;
+transform: translateY(-3px);
+}
+
+.secondary-btn {
+padding: 14px 36px;
+background: rgba(255,255,255,0.6);
+border: 2px solid #ff7a59;
+color: #1f2933;
+border-radius: 30px;
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.secondary-btn:hover {
+background: white;
+color: #ff4d4d;
+}
+
+.primary-btn,
+.secondary-btn,
+.ghost-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.order-btn {
+    padding: 10px 25px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #ff2f2f;
+    transform: scale(1.05);
+}
+
+
+/* Menu */
+.menu {
+    padding: 3rem 2rem;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: 0.4s ease;
+}
+
+.menu-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 1rem;
+}
+
+.menu-card {
+    padding: 2rem;
+    background: #ffeded;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.badge {
+position: absolute;
+top: 15px;
+left: 15px;
+background: #ff4d4d;
+color: white;
+padding: 5px 12px;
+font-size: 0.75rem;
+border-radius: 20px;
+}
+
+.menu-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Tablets */
+@media (max-width: 1200px) {
+    .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #ff4d4d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+    display: flex;
+}
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* Footer Section */
+.site-footer {
+    background: #1f2933;
+    color: #f9fafb;
+    padding: 4rem 6rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.site-footer h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ff7a59;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 3rem 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+    .hero-images {
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+    #about,
+    #contact {
+        padding: 3rem 2rem;
+    }
+}
+
+    @keyframes fadeUp {
+    from {
+    opacity: 0;
+    transform: translateY(40px);
+}
+    to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
